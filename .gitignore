@@ -1,0 +1,7 @@
+# GAR 관련
+.env
+credentials.json
+*-key.json
+.terraform/
+*.tfstate
+*.tfstate.backup
