@@ -1,7 +1,7 @@
 @echo off
 
 :: 절대 경로로 .venv 지정
-set VENV_PATH=C:\Users\shw41\GAR\.venv
+set VENV_PATH=C:\Users\shw41\GAR\venv
 
 :: .venv 폴더 사용
 if exist "%VENV_PATH%" (
