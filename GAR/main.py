@@ -3,9 +3,8 @@ import os
 import pandas as pd
 from Selection_agent import SelectionAgent
 from DPO_agent import DPO_Agent
-from DPO_agent_finetuning import dpo_agent_finetuning
+from DPO_agent_Finetuning import dpo_agent_finetuning
 from Finetuned_DPO_agent import Finetuned_DPO_agent
-from G_Eval_agent import g_eval_agent
 from openai import OpenAI
 def ensure_dir(file_path):
     directory = os.path.dirname(file_path)
@@ -14,7 +13,6 @@ def ensure_dir(file_path):
 def main():
     API_KEY = os.getenv('OPENAI_API_KEY')
     
-    # 데이터 경로 설정
     dataset_path = 'data/raw/dataset.csv'
     selected_docs_path = 'data/processed/selected_docs.csv'
     dpo_responses_path = 'data/processed/dpo_responses.csv'

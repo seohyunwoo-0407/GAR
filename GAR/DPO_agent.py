@@ -6,13 +6,9 @@ import numpy as np
 import openai
 from tqdm import tqdm
 from dotenv import load_dotenv
-# .env 파일 로드
 load_dotenv()
-#model_name = "gpt-4o-mini"
-# ft:gpt-4o-mini-2024-07-18:personal::AkFnSqzI
 class DPOTrainer:
     def __init__(self, model_name):
-        # .env 파일 로드
         load_dotenv()
         self.model_name = model_name
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -83,7 +79,6 @@ class DPOTrainer:
             dpo_data.loc[i] = [query_line, response1, response2]
         dpo_data.to_csv(output_csv_path)
         return dpo_data
-# 사용 예시:
 if __name__ == "__main__":
     model_name = "gpt-4o-mini"  # or "ft:gpt-4o-mini-2024-07-18:personal::AkFnSqzI"
     trainer = DPOTrainer(model_name)
