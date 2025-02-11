@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# venv가 없으면 생성
 if [ ! -d "venv" ]; then
     echo "Creating virtual environment..."
     python3 -m venv venv
@@ -10,7 +9,7 @@ else
     source venv/bin/activate
 fi
 
-# .env 파일 로드
+
 set -a
 source .env
 set +a
